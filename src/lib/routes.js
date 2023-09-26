@@ -1,5 +1,7 @@
+// Import necessary modules from react-router-dom
 import { createBrowserRouter } from "react-router-dom";
 
+// Import React components used for routing
 import Login from "components/auth/Login";
 import Register from "components/auth/Register";
 import Layout from "components/layout";
@@ -8,6 +10,7 @@ import Comments from "components/comments";
 import Profile from "components/profile";
 import Users from "components/users";
 
+// Define route paths as constants
 export const LOGIN = "/";
 export const REGISTER = "/register";
 
@@ -17,28 +20,30 @@ export const USERS = "/protected/users";
 export const PROFILE = "/protected/profile/:id";
 export const COMMENTS = "/protected/comments/:id";
 
+// Create a router configuration using createBrowserRouter
 export const router = createBrowserRouter([
-  { path: LOGIN, element: <Login /> },
-  { path: REGISTER, element: <Register /> },
+  // Define routes and their corresponding components
+  { path: LOGIN, element: <Login /> }, // When the path is "/", render the Login component
+  { path: REGISTER, element: <Register /> }, // When the path is "/register", render the Register component
   {
-    path: PROTECTED,
-    element: <Layout />,
-    children: [
+    path: PROTECTED, // When the path is "/protected",
+    element: <Layout />, // render the Layout component as a layout wrapper,
+    children: [ // and within the Layout component, define child routes
       {
-        path: DASHBOARD,
-        element: <Dashboard />,
+        path: DASHBOARD, // When the path is "/protected/dashboard",
+        element: <Dashboard />, // render the Dashboard component
       },
       {
-        path: USERS,
-        element: <Users />,
+        path: USERS, // When the path is "/protected/users",
+        element: <Users />, // render the Users component
       },
       {
-        path: PROFILE,
-        element: <Profile />,
+        path: PROFILE, // When the path is "/protected/profile/:id",
+        element: <Profile />, // render the Profile component
       },
       {
-        path: COMMENTS,
-        element: <Comments />,
+        path: COMMENTS, // When the path is "/protected/comments/:id",
+        element: <Comments />, // render the Comments component
       },
     ],
   },

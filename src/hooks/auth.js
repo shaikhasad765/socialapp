@@ -1,3 +1,4 @@
+// Imports
 import React, { useEffect, useState } from "react";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
@@ -9,6 +10,7 @@ import isUsernameExists from "utils/isUsernameExists";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Custom hook to retrieve authenticated user information
 export function useAuth() {
   const [authUser, authLoading, error] = useAuthState(auth);
   const [isLoading, setLoading] = useState(true);
@@ -25,13 +27,14 @@ export function useAuth() {
 
     if (!authLoading) {
       if (authUser) fetchData();
-      else setLoading(false); // Not signed in
+      else setLoading(false); 
     }
-  }, [authLoading, authUser]); // Include authUser in the dependency array
+  }, [authLoading, authUser]);
 
   return { user, isLoading, error };
 }
 
+// Custom hook for user login
 export function useLogin() {
   const [isLoading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -53,6 +56,7 @@ export function useLogin() {
   return { login, isLoading };
 }
 
+// Custom hook for user registration
 export function useRegister() {
   const [isLoading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -94,6 +98,7 @@ export function useRegister() {
   return { register, isLoading };
 }
 
+// Custom hook for user logout
 export function useLogout() {
   const [signOut, isLoading] = useSignOut(auth);
   const navigate = useNavigate();
@@ -110,12 +115,12 @@ export function useLogout() {
   return { logout, isLoading };
 }
 
+// Main application component
 function App() {
   return (
     <div>
-      {/* Include the ToastContainer in your component hierarchy */}
+      {/* Including the ToastContainer in your component hierarchy */}
       <ToastContainer position="top-right" autoClose={5000} />
-      {/* ... your other components */}
     </div>
   );
 }

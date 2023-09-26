@@ -1,3 +1,4 @@
+// Imports
 import { uuidv4 } from "@firebase/util";
 import {
   arrayRemove,
@@ -21,6 +22,7 @@ import {
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Custom hook to add a new post
 export function useAddPost() {
   const [isLoading, setLoading] = useState(false);
 
@@ -40,6 +42,7 @@ export function useAddPost() {
   return { addPost, isLoading };
 }
 
+// Custom hook to toggle like on a post
 export function useToggleLike({ id, isLiked, uid }) {
   const [isLoading, setLoading] = useState(false);
 
@@ -55,6 +58,7 @@ export function useToggleLike({ id, isLiked, uid }) {
   return { toggleLike, isLoading };
 }
 
+// Custom hook to delete a post
 export function useDeletePost(id) {
   const [isLoading, setLoading] = useState(false);
 
@@ -67,7 +71,7 @@ export function useDeletePost(id) {
       // Delete post document
       await deleteDoc(doc(db, "posts", id));
 
-      // Delete comments
+      // Delete associated comments
       const q = query(collection(db, "comments"), where("postID", "==", id));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach(async (doc) => deleteDoc(doc.ref));
@@ -81,6 +85,7 @@ export function useDeletePost(id) {
   return { deletePost, isLoading };
 }
 
+// Custom hook to get a single post by its ID
 export function usePost(id) {
   const q = doc(db, "posts", id);
   const [post, isLoading] = useDocumentData(q);
@@ -88,6 +93,7 @@ export function usePost(id) {
   return { post, isLoading };
 }
 
+// Custom hook to get a list of posts, filtered by user ID
 export function usePosts(uid = null) {
   const q = uid
     ? query(

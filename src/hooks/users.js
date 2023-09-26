@@ -1,3 +1,4 @@
+// Imports
 import { collection, doc, query, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "lib/firebase";
@@ -10,17 +11,20 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Custom hook to get user data by ID
 export function useUser(id) {
   const q = query(doc(db, "users", id));
   const [user, isLoading] = useDocumentData(q);
   return { user, isLoading };
 }
 
+// Custom hook to get a list of all users
 export function useUsers() {
   const [users, isLoading] = useCollectionData(collection(db, "users"));
   return { users, isLoading };
 }
 
+// Custom hook to update user avatar
 export function useUpdateAvatar(uid) {
   const [isLoading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
@@ -45,7 +49,7 @@ export function useUpdateAvatar(uid) {
     toast.success("Profile updated!", { position: "top-right", autoClose: 5000 });
     setLoading(false);
 
-    navigate(0); // Replace with the appropriate route you want to navigate to
+    navigate(0); 
   }
 
   return {
