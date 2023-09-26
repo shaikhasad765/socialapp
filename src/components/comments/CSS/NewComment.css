@@ -1,0 +1,55 @@
+/* Style the new comment container */
+
+.new-comment-container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the new comment header */
+.new-comment-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+/* Style the avatar within the new comment header */
+.new-comment-header .avatar {
+    margin-right: 8px;
+}
+
+/* Style the new comment form */
+.new-comment-form {
+    flex: 1;
+    margin-left: 8px;
+}
+
+/* Style the new comment input field */
+.new-comment-input input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: aliceblue;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* Style the add comment button */
+.add-comment-button {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+
+/* Style the add comment button on hover */
+.add-comment-button:hover {
+    background-color: lightgreen;
+    transform: scale(1.1);
+}

@@ -1,0 +1,14 @@
+.post-container{
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-text{
+    margin-left: 20px;
+}
+
+.post-content{
+    padding-top: 5px;
+}

@@ -1,0 +1,41 @@
+.profile-container {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.change-avatar-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.change-avatar-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+    margin-left: 20px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.profile-stats {
+    display: flex;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}

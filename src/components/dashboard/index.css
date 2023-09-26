@@ -1,0 +1,54 @@
+/* Styling for NewPost component */
+.new-post-container {
+    max-width: 650px;
+    width: 650px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #87dfa1, #b1dcbe);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-header h1 {
+    font-size: 24px;
+}
+
+.textarea {
+    width: 97%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    border: none;
+    resize: none;
+    min-height: 80px;
+}
+
+.post-button {
+    padding: 10px 20px;
+    background-color: #8fd8f9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.post-button:hover {
+    transform: scale(1.05);
+    background-color: #5dc2ed;
+}
+
+.post-button.loading {
+    background-color: #ccc;
+    /* Change to your loading color */
+    cursor: not-allowed;
+}

@@ -1,0 +1,10 @@
+.posts-list-container {
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right, #87dfa1, #b1dcbe);
+    margin-top: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0.9;
+}
+

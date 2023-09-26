@@ -1,0 +1,41 @@
+.comment-container{
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.comment-details {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.comment-time {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: gray;
+}
+
+.comment-delete-button {
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.comment-text {
+    margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px;
+    background-color: whitesmoke;
+    margin-top: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 600px;
+}
+
+  
+  .header-content {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .header-date {
+    font-size: 14px;
+    color: #888; 
+  }
+  

@@ -1,0 +1,8 @@
+/* Style the comment list container */
+.comment-list-container {
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 40px;
+    border-radius: 20px;
+    background-color: white;
+}

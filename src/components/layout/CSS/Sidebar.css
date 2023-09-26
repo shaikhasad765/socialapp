@@ -1,0 +1,100 @@
+/* Styling for ActiveUser component */
+.active-user-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: white;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.edit-profile-button {
+    display: block;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #8fd8f9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.edit-profile-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Sidebar component */
+.sidebar-container {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    margin-top: 60px;
+    margin-right: 10px;
+    max-width: 300px;
+    background-image: linear-gradient(to right, #b1dcbe, #87dfa1);
+    position: sticky;
+    border-radius: 20px;
+    top: 4rem;
+}
+
+/* Hide the sidebar on screens smaller than md (768px) */
+@media (max-width: 767px) {
+    .sidebar-container {
+        display: none;
+    }
+}
+
+.sidebar-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.user-list-divider {
+    /* border-bottom: 2px solid #007bff; */
+    margin-bottom: 10px;
+}
+
+.all-users-button {
+    display: block;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #8fd8f9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.all-users-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

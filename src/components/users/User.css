@@ -1,0 +1,17 @@
+.user-container {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+}
+
+.user-username {
+    font-size: 1rem;
+}
+
+.view-profile-link {
+    text-decoration: none;
+    color: blue;
+}
